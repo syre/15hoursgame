@@ -16,19 +16,23 @@ public class RopeOnClick : MonoBehaviour {
 		jointTarget.enabled = true;
 		var ninjaPos = gameObject.GetComponent<Rigidbody2D> ();
 		var castResult = Physics2D.Raycast(ninjaPos.position, mouseWorldPosition, ropeDistance);
-		if (castResult.collider.gameObject.tag == "ropeable")
-		{
-			jointTarget.gameObject.SetActive (true);
-			this.transform.GetComponent<HingeJoint2D> ().enabled = true;
-			Debug.Log ("castpoint x y: " + castResult.point.x + " " + castResult.point.y);
-			jointTarget.target = castResult.point;
+		Debug.Log ("Clicked on x y : " + mouseWorldPosition.x + " " + mouseWorldPosition.y);
+		if (castResult.collider != null && castResult.collider.gameObject != null) {
+			if (castResult.collider.gameObject.tag == "ropeable")
+			{
+				jointTarget.gameObject.SetActive (true);
+				this.transform.GetComponent<HingeJoint2D> ().enabled = true;
+				Debug.Log ("castpoint x y: " + castResult.point.x + " " + castResult.point.y);
+				jointTarget.target = castResult.point;
+			}
 		}
+
 	}
 	void Update()
 	{
 		if (Input.GetMouseButtonDown (0))
 			attachRope();
-		else if (Input.GetMouseButtonUp(0))
+		else if (Input.GetMouseButtonUp(2))
 			detachRope();
 	}
 	

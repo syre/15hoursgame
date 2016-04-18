@@ -7,7 +7,7 @@ public class RopeOnClick : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		joint = gameObject.AddComponent<HingeJoint2D> ();
+		joint = gameObject.GetComponent<HingeJoint2D> ();
 		joint.enabled = false;
 	}
 	void OnMouseDown()

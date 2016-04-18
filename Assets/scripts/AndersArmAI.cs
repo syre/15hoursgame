@@ -39,13 +39,11 @@ public class AndersArmAI : MonoBehaviour {
 					this.gameObject.transform.Rotate (Vector3.forward * speed * Time.deltaTime);
 					if (this.gameObject.transform.eulerAngles.z > degrees) {
 						isGoingBack = true;
-						Debug.Log ("is going back = true");
 					}
 				} else {
 					this.gameObject.transform.Rotate (Vector3.forward * -speed * Time.deltaTime);
 					if ((this.gameObject.transform.eulerAngles.z < (360f - degrees)) && this.gameObject.transform.eulerAngles.z > 10f) {
 						isGoingBack = true;
-						Debug.Log ("is going back = true");
 					}
 				}
 			} else if (isGoingBack) {

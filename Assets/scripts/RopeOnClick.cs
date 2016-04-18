@@ -10,7 +10,7 @@ public class RopeOnClick : MonoBehaviour {
 		joint = gameObject.GetComponent<HingeJoint2D> ();
 		joint.enabled = false;
 	}
-	void OnMouseDown()
+	void attachRope()
 	{
 		Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		joint.enabled = true;
@@ -22,7 +22,15 @@ public class RopeOnClick : MonoBehaviour {
 			joint.connectedBody = ninjaPos;
 		}
 	}
-	void OnMouseUp()
+	void Update()
+	{
+		if (Input.GetMouseButtonDown (0))
+			attachRope();
+		else if (Input.GetMouseButtonUp(0))
+			detachRope();
+	}
+	
+	void detachRope()
 	{
 		joint.enabled = false;
 	}

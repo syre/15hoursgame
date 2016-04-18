@@ -2,12 +2,12 @@
 using System.Collections;
 
 public class RopeOnClick : MonoBehaviour {
-	private HingeJoint2D joint;
+	private DistanceJoint2D joint;
 	public float ropeDistance = 10f;
 
 	// Use this for initialization
 	void Start () {
-		joint = gameObject.GetComponent<HingeJoint2D> ();
+		joint = gameObject.GetComponent<DistanceJoint2D> ();
 		joint.enabled = false;
 	}
 	void attachRope()

@@ -1,9 +1,19 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 15e3236a36d11bf409d3e45475167267
 timeCreated: 1460982245
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
+=======
+guid: 0f9a9a789c38f476b8d27b23e828cdf9
+timeCreated: 1460985217
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ninja_player_0
+    21300002: ninja_player_1
+>>>>>>> origin/master
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,7 +36,11 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
+<<<<<<< HEAD
   textureFormat: -1
+=======
+  textureFormat: -3
+>>>>>>> origin/master
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
@@ -38,7 +52,11 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
+<<<<<<< HEAD
   spriteMode: 1
+=======
+  spriteMode: 2
+>>>>>>> origin/master
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +67,33 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
+<<<<<<< HEAD
     sprites: []
+=======
+    sprites:
+    - name: ninja_player_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 14
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ninja_player_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 14
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+>>>>>>> origin/master
     outline: []
   spritePackingTag: 
   userData: 

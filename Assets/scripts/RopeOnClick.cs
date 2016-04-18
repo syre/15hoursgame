@@ -3,7 +3,7 @@ using System.Collections;
 
 public class RopeOnClick : MonoBehaviour {
 	
-	public TargetJoint2D jointTarget;
+	public FixedJoint2D jointTarget;
 	public float ropeDistance = 10f;
 
 	// Use this for initialization
@@ -23,7 +23,7 @@ public class RopeOnClick : MonoBehaviour {
 				jointTarget.gameObject.SetActive (true);
 				this.transform.GetComponent<HingeJoint2D> ().enabled = true;
 				Debug.Log ("castpoint x y: " + castResult.point.x + " " + castResult.point.y);
-				jointTarget.target = castResult.point;
+				jointTarget.connectedAnchor = castResult.point;
 			}
 		}
 

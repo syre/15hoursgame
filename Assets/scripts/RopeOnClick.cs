@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AddRope : MonoBehaviour {
+public class RopeOnClick : MonoBehaviour {
 	public HingeJoint2D joint;
 	public float ropeDistance = 10f;
 

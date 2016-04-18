@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class RopeOnClick : MonoBehaviour {
-	public HingeJoint2D joint;
+	private HingeJoint2D joint;
 	public float ropeDistance = 10f;
 
 	// Use this for initialization

@@ -21,6 +21,7 @@ public class DeathScript : MonoBehaviour {
 	public void OnDeath(){
 		diedText.enabled = true;
 		tryAgainButton.gameObject.SetActive (true);
+		StarScript.canstillWin = false;
 	}
 
 	public void PlayAgain(){

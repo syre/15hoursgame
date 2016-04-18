@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class StarScript : MonoBehaviour {
 
+	public static bool canstillWin = true;
 	public Text textToShow;
 	public Button buttonToShow;
 
@@ -20,9 +21,11 @@ public class StarScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.tag == "player") {
-			textToShow.enabled = true;
-			buttonToShow.gameObject.SetActive (true);
+		if (canstillWin) {
+			if (other.tag == "player") {
+				textToShow.enabled = true;
+				buttonToShow.gameObject.SetActive (true);
+			}
 		}
 	}
 

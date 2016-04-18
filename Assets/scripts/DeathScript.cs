@@ -24,7 +24,8 @@ public class DeathScript : MonoBehaviour {
 	}
 
 	public void PlayAgain(){
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+		Debug.Log(SceneManager.GetActiveScene ().name);
+		SceneManager.LoadScene(SceneManager.GetActiveScene ().name);
 	}
 
 

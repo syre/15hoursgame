@@ -15,6 +15,7 @@ public class ColliderNinjaDeath : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll){
 		if (coll.gameObject.tag == "player") {
+			Destroy (coll.gameObject);
 			GameObject.FindGameObjectWithTag ("deathhandler").GetComponent<DeathScript>().OnDeath();
 		}
 	}

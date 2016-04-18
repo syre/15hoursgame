@@ -47,7 +47,6 @@ TextureImporter:
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
-<<<<<<< HEAD
   buildTargetSettings:
   - buildTarget: Web
     maxTextureSize: 2048
@@ -69,9 +68,6 @@ TextureImporter:
     textureFormat: -3
     compressionQuality: 50
     allowsAlphaSplitting: 0
-=======
-  buildTargetSettings: []
->>>>>>> origin/master
   spriteSheet:
     sprites: []
     outline: []

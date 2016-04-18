@@ -15,7 +15,7 @@ public class RopeOnClick : MonoBehaviour {
 		Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		jointTarget.enabled = true;
 		var ninjaPos = gameObject.GetComponent<Rigidbody2D> ();
-		var castResult = Physics2D.Raycast(ninjaPos.position, mouseWorldPosition, ropeDistance);
+		var castResult = Physics2D.Raycast(ninjaPos.position, mouseWorldPosition-ninjaPos.position, ropeDistance);
 		Debug.Log ("Clicked on x y : " + mouseWorldPosition.x + " " + mouseWorldPosition.y);
 		if (castResult.collider != null && castResult.collider.gameObject != null) {
 			if (castResult.collider.gameObject.tag == "ropeable")

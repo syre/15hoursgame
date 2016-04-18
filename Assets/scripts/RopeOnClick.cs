@@ -52,7 +52,7 @@ public class RopeOnClick : MonoBehaviour {
 				this.transform.GetComponent<SpriteRenderer> ().sprite = thinGuy;
 			} else {
 				isFat = true;
-				joint.distance = 6;
+				joint.distance = 6.5f;
 				this.transform.GetComponent<SpriteRenderer> ().sprite = fatGuy;
 			}
 		}

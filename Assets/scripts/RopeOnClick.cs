@@ -5,6 +5,7 @@ public class RopeOnClick : MonoBehaviour {
 	
 	public FixedJoint2D jointTarget;
 	public float ropeDistance = 10f;
+	public GameObject castpoint;
 
 	// Use this for initialization
 	void Start () {
@@ -15,14 +16,13 @@ public class RopeOnClick : MonoBehaviour {
 		Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		jointTarget.enabled = true;
 		var ninjaPos = gameObject.GetComponent<Rigidbody2D> ();
-		var castResult = Physics2D.Raycast(ninjaPos.position, mouseWorldPosition-ninjaPos.position, ropeDistance);
-		Debug.Log ("Clicked on x y : " + mouseWorldPosition.x + " " + mouseWorldPosition.y);
+		var castResult = Physics2D.Raycast(castpoint.transform.position, mouseWorldPosition-ninjaPos.position, ropeDistance);
 		if (castResult.collider != null && castResult.collider.gameObject != null) {
 			if (castResult.collider.gameObject.tag == "ropeable")
 			{
+				Vector2 oldpos = jointTarget.connectedAnchor;
 				jointTarget.gameObject.SetActive (true);
 				this.transform.GetComponent<HingeJoint2D> ().enabled = true;
-				Debug.Log ("castpoint x y: " + castResult.point.x + " " + castResult.point.y);
 				jointTarget.connectedAnchor = castResult.point;
 			}
 		}

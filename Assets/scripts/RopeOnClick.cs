@@ -18,6 +18,7 @@ public class RopeOnClick : MonoBehaviour {
 		var castResult = Physics2D.Raycast(ninjaPos.position, mouseWorldPosition, ropeDistance);
 		if (castResult.collider.tag == "ropeable")
 		{
+			Debug.DrawRay (ninjaPos.position, Vector3.zero);
 			joint.connectedAnchor = castResult.collider.attachedRigidbody.position;
 			joint.connectedBody = ninjaPos;
 		}

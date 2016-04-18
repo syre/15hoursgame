@@ -6,10 +6,6 @@ public class RopeOnClick : MonoBehaviour {
 	public FixedJoint2D jointTarget;
 	public float ropeDistance = 10f;
 	public GameObject castpoint;
-	//public GameObject part5;
-	//public GameObject part6;
-	//public GameObject part7;
-	//public GameObject part8;
 	public LineRenderer line;
 	public GameObject connectPoint;
 	public GameObject hook;
@@ -22,9 +18,6 @@ public class RopeOnClick : MonoBehaviour {
 	void Start () {
 		detachRope ();
 		line.SetVertexCount (2);
-		//part6.SetActive (false);
-		//part7.SetActive (false);
-		//part8.SetActive (false);
 	}
 	void attachRope()
 	{

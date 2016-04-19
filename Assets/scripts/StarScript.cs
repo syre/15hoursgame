@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class StarScript : MonoBehaviour {
 
-	public static bool canstillWin = true;
+	public static bool canstillWin;
 	public Text textToShow;
 	public Button buttonToShow;
 
@@ -13,6 +13,7 @@ public class StarScript : MonoBehaviour {
 	void Start () {
 		textToShow.enabled = false;
 		buttonToShow.gameObject.SetActive (false);
+		canstillWin = true;
 	}
 	
 	// Update is called once per frame
